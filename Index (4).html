@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="google-site-verification" content="IRdpX6Fzrd1h0NliMAUZJOOtul63Ojzit0NFK-NGkDs" />
+    <link rel="icon" type="image/png" sizes="32×32" href="tmk.png">
+    <title>The Manor House Kegalle | Heritage Hotel in Sri Lanka</title>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKG4Q0916"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0MKG4Q0916');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TFCZ5JMR');</script>
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "The Manor House Kegalle",
+      "image": "https://manorhouse.lk/main.jpg",
+      "logo": "https://manorhouse.lk/tmk.png",
+      "url": "https://manorhouse.lk/",
+      "sameAs": [
+        "https://www.facebook.com/share/1Av6nz6hcm/",
+        "https://www.instagram.com/themanorhousekegalle"
+      ]
+    }
+    </script>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background-color: #fef9f0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-img {
+            height: auto;
+            width: auto;
+            max-height: 60px;
+            max-width: 140px;
+            object-fit: contain;
+            display: block;
+            transition: all 0.2s ease;
+        }
+        .logo-text h2 {
+            font-size: 1.8rem;
+            color: #8B5A2B;
+            letter-spacing: 1px;
+            margin: 0;
+            line-height: 1.2;
+        }
+        .logo-text p {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: #b87c4a;
+            margin: 0;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #3a2c1f;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #b67b3e;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #8B5A2B;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #b87c4a;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #b87c4a;
+            color: #b87c4a;
+        }
+        .btn-outline:hover {
+            background: #b87c4a;
+            color: white;
+        }
+        .btn:hover {
+            background: #9a673a;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('main.jpg') center/cover no-repeat;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #5a3e2b;
+            position: relative;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #b87c4a;
+            margin: 0.5rem auto 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #4a4a4a;
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .room-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+        .room-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .room-info {
+            padding: 1.5rem;
+        }
+        .room-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .room-info p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        .price {
+            font-weight: 600;
+            color: #b87c4a;
+            font-size: 1.2rem;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        .amenity {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .amenity i {
+            font-size: 2.5rem;
+            color: #b87c4a;
+            margin-bottom: 1rem;
+        }
+        .amenity h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.02);
+        }
+
+        .location-box {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .map {
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .address {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .address i {
+            color: #b87c4a;
+            margin-right: 8px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .contact-info h3, .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-detail {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .contact-detail i {
+            font-size: 1.5rem;
+            color: #b87c4a;
+            width: 40px;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+        textarea {
+            resize: vertical;
+        }
+
+        footer {
+            background: #2c241a;
+            color: #e2dcd5;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .social-links {
+            margin-top: 1rem;
+        }
+        .social-links a {
+            color: #e2dcd5;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .social-links a:hover {
+            color: #b87c4a;
+        }
+        .visitor-counter {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .visitor-counter i {
+            margin-right: 6px;
+            color: #b87c4a;
+        }
+        #visit-count {
+            font-weight: 600;
+            color: #b87c4a;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .logo-text h2 {
+                font-size: 1.4rem;
+            }
+            .logo-img {
+                max-height: 45px;
+                max-width: 110px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFCZ5JMR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img src="tmk.png" 
+                     alt="The Manor House Kegalle Logo" 
+                     class="logo-img"
+                     onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 80\'%3E%3Crect width=\'200\' height=\'80\' fill=\'%23b87c4a\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-size=\'24\' font-family=\'monospace\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\'%3EManor%3C/text%3E%3C/svg%3E'; this.style.background='#b87c4a';">
+                <div class="logo-text">
+                    <h2>The Manor House</h2>
+                    <p>KEGALLE · SRI LANKA</p>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to The Manor House</h1>
+        <p>Experience colonial elegance & modern comfort in a village setting</p>
+        <a href="#contact" class="btn">Book Your Stay</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">Our Story</h2>
+        <div class="about-grid">
+            <div class="about-img">
+                <img src="main.jpg" alt="Manor House exterior with tropical gardens">
+            </div>
+            <div class="about-text">
+                <h3>A Heritage Retreat</h3>
+                <p>Nestled in the lush greenery, The Manor House is a lovingly restored colonial-era mansion that offers a serene escape. Surrounded by 10 acres of tropical gardens with fruit trees, coconut, tea, cinnamon and banana, we blend old-world charm with contemporary amenities.</p>
+                <p>Our family-run hotel provides personalise service, Sri Lankan hospitality and a peaceful atmosphere perfect for relaxation.</p>
+                <a href="#contact" class="btn btn-outline">Inquire Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="rooms" style="background: #faf5ea;">
+    <div class="container">
+        <h2 class="section-title">Elegant Suites & Rooms</h2>
+        <div class="rooms-grid">
+            <!-- Standard Double Room (exact match JPG) -->
+            <div class="room-card">
+                <img src="Stand.jpg" alt="Standard Double Room garden view">
+                <div class="room-info">
+                    <h3>Standard Double Room</h3>
+                    <p>Spacious rooms with garden views, double beds and private verandars or balconies.</p>
+                    <span class="price">From LKR 11,500/night</span>
+                </div>
+            </div>
+            <!-- Family Room (updated per JPG) -->
+            <div class="room-card">
+                <img src="two.jpg" alt="Family Room with balcony">
+                <div class="room-info">
+                    <h3>Family Room</h3>
+                    <p>Perfect for family, this spacious ensuite room features two double beds and a private balcony. Enjoy quality time together in a relaxing setting. Suitable for a couple with one child.</p>
+                    <span class="price">From LKR 13,500/night</span>
+                </div>
+            </div>
+            <!-- Deluxe Double Room with Lounge (updated) -->
+            <div class="room-card">
+                <img src="one.jpg" alt="Deluxe Double Room with Lounge">
+                <div class="room-info">
+                    <h3>Deluxe Double Room with Lounge</h3>
+                    <p>Experience versatile comfort in our Deluxe Double Room. The room boasts a well-appointed large bathroom, lounge with sofa and a dining table with chairs, and a private terrace, providing a quiet sanctuary with all the essential amenities for a memorable stay.</p>
+                    <span class="price">From LKR 16,800/night</span>
+                </div>
+            </div>
+            <!-- Deluxe Family Suite (exact JPG) -->
+            <div class="room-card">
+                <img src="three.jpg" alt="Deluxe Family Suite living area">
+                <div class="room-info">
+                    <h3>Deluxe Family Suite</h3>
+                    <p>Spacious and thoughtfully designed, the suite features a double bed plus two single beds for children, large bathroom, lounge with sofa set, dining table with chairs and a private balcony – perfect for relaxed family stays.</p>
+                    <span class="price">From LKR 18,500/night</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="amenities">
+    <div class="container">
+        <h2 class="section-title">Amenities & Services</h2>
+        <div class="amenities-grid">
+            <div class="amenity"><i class="fas fa-wifi"></i><h4>Free WiFi</h4><p>High-speed internet throughout</p></div>
+            <div class="amenity"><i class="fas fa-utensils"></i><h4>Asian Breakfast</h4><p>Traditional Sri Lankan & English or continental options</p></div>
+            <div class="amenity"><i class="fas fa-car"></i><h4>Free Parking</h4><p>Secure on-site parking</p></div>
+            <div class="amenity"><i class="fas fa-tree"></i><h4>10-Acre Gardens</h4><p>Tropical fruits, coconut, tea, cinnamon & banana</p></div>
+            <div class="amenity"><i class="fas fa-snowflake"></i><h4>Air Conditioning</h4><p>All rooms fully air-conditioned</p></div>
+            <div class="amenity"><i class="fas fa-concierge-bell"></i><h4>24/7 Concierge</h4><p>Personalized assistance</p></div>
+            <div class="amenity"><i class="fas fa-mug-hot"></i><h4>Sri Lankan Lunch/Dinner</h4><p>Authentic local cuisine prepared fresh</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" style="background: #faf5ea;">
+    <div class="container">
+        <h2 class="section-title">Photo Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="in.jpg" alt="Swimming pool and loungers"></div>
+            <div class="gallery-item"><img src="in1.jpg" alt="Manor House facade with vintage charm"></div>
+            <div class="gallery-item"><img src="in2.jpg" alt="Elegant dining area"></div>
+            <div class="gallery-item"><img src="in3.jpg" alt="Luxury suite interior"></div>
+            <!-- Added the official JPG brochure image (1000001286.jpg) to fully integrate the original writing & rates -->
+            <div class="gallery-item"><img src="1000001286.jpg" alt="The Manor House official rate & info brochure"></div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;"></div>
+    </div>
+</section>
+
+<section id="location">
+    <div class="container">
+        <h2 class="section-title">Our Location</h2>
+        <div class="location-box">
+            <div class="map">
+                <!-- Google Maps embed for exact Manor House Kegalle location -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8503077993887!2d80.40527902420092!3d7.257871819236051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3147c927110a5%3A0xb03e2b8b5065c7c4!2sThe%20Manor%20House%20Kegalle!5e0!3m2!1sen!2slk!4v1774536947166!5m2!1sen!2slk" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="address">
+                <i class="fas fa-map-marker-alt"></i> Mahagoda Estate, Mangalagama Road, Mangalagama, Molagoda, Kegalle, Sabaragamuwa Province, Sri Lanka<br>
+                <i class="fas fa-phone-alt"></i> +94 77 3718508 &nbsp;|&nbsp;
+                <i class="fas fa-envelope"></i> themanorhousekegalle@gmail.com
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Book Your Stay</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-detail"><i class="fas fa-phone"></i> <span>+94 77 371 8508</span></div>
+                <div class="contact-detail"><i class="fas fa-envelope"></i> <span>themanorhousekegalle@gmail.com</span></div>
+                <div class="contact-detail"><i class="fas fa-clock"></i> <span>Check-in: 2:00 PM | Check-out: 11:00 AM</span></div>
+                <div class="contact-detail"><i class="fas fa-globe"></i> <span>Languages: English, Sinhala</span></div>
+            </div>
+            <div class="contact-form">
+                <h3>Send an Inquiry</h3>
+                <form action="https://formspree.io/f/mwvwkgbd" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" name="message" placeholder="Tell us your dates, room preference, or special requests..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <p style="font-size: 0.8rem; margin-top: 1rem;">* For immediate bookings, please call us. We’ll respond within 24 hours.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 The Manor House Kegalle. All rights reserved. | Designed with <i class="fas fa-heart" style="color:#b87c4a;"></i> for authentic hospitality</p>
+        <div class="visitor-counter">
+            <i class="fas fa-eye"></i> Total Visitors:  <span id="visit-count">Loading...</span>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1Av6nz6hcm/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/themanorhousekegalle?igsh=ZzRoeG14cWFwNmdo"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            }
+        });
+    });
+
+    // Active link highlighting on scroll
+    window.addEventListener('scroll', () => {
+        let sections = document.querySelectorAll('section');
+        let scrollPos = window.scrollY + 100;
+        sections.forEach(section => {
+            let top = section.offsetTop;
+            let height = section.offsetHeight;
+            let id = section.getAttribute('id');
+            if(scrollPos >= top && scrollPos < top + height) {
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+
+    // Visitor counter using CountAPI (unchanged but reliable)
+    const counterKey = 'manor-house-kegalle-total-visits';
+    const counterNamespace = 'manor-house';
+
+    async function updateVisitorCount() {
+        const countElement = document.getElementById('visit-count');
+        if (!countElement) return;
+
+        try {
+            const incrementResponse = await fetch(`https://api.countapi.xyz/hit/${counterNamespace}/${counterKey}`);
+            const incrementData = await incrementResponse.json();
+            if (incrementData && incrementData.value !== undefined) {
+                countElement.textContent = incrementData.value.toLocaleString();
+            } else {
+                throw new Error('Invalid response');
+            }
+        } catch (error) {
+            console.error('Visitor counter error:', error);
+            try {
+                const getResponse = await fetch(`https://api.countapi.xyz/get/${counterNamespace}/${counterKey}`);
+                const getData = await getResponse.json();
+                if (getData && getData.value !== undefined) {
+                    countElement.textContent = getData.value.toLocaleString();
+                } else {
+                    countElement.textContent = 'N/A';
+                }
+            } catch (fallbackError) {
+                countElement.textContent = 'N/A';
+            }
+        }
+    }
+
+    updateVisitorCount();
+</script>
+</body>
+</html>
