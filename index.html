@@ -901,7 +901,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     // ----- Visitor Counter (robust) -----
     const counterKey = 'manor-house-kegalle-visits';
-    let visitCount = 0;
+    let visitCount = 300;
 
     async function updateVisitorCount() {
         const countElement = document.getElementById('visit-count');
@@ -920,9 +920,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         let stored = localStorage.getItem(counterKey);
         if (stored === null) {
-            visitCount = 1;
+            visitCount = 300;
         } else {
-            visitCount = parseInt(stored, 10) + 1;
+            visitCount = parseInt(stored, 300) + 1;
         }
         localStorage.setItem(counterKey, visitCount);
         countElement.textContent = visitCount.toLocaleString();
