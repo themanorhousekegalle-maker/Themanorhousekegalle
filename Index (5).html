@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="google-site-verification" content="IRdpX6Fzrd1h0NliMAUZJOOtul63Ojzit0NFK-NGkDs" />
+    <link rel="icon" type="image/png" sizes="32×32" href="tmk.png">
+    <title>The Manor House Kegalle | Heritage Hotel in Sri Lanka</title>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKG4Q0916"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0MKG4Q0916');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TFCZ5JMR');</script>
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "The Manor House Kegalle",
+      "image": "https://manorhouse.lk/main.jpg",
+      "logo": "https://manorhouse.lk/tmk.png",
+      "url": "https://manorhouse.lk/",
+      "sameAs": [
+        "https://www.facebook.com/share/1Av6nz6hcm/",
+        "https://www.instagram.com/themanorhousekegalle"
+      ]
+    }
+    </script>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background-color: #fef9f0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-img {
+            height: auto;
+            width: auto;
+            max-height: 60px;
+            max-width: 140px;
+            object-fit: contain;
+            display: block;
+            transition: all 0.2s ease;
+        }
+        .logo-text h2 {
+            font-size: 1.8rem;
+            color: #8B5A2B;
+            letter-spacing: 1px;
+            margin: 0;
+            line-height: 1.2;
+        }
+        .logo-text p {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: #b87c4a;
+            margin: 0;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #3a2c1f;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #b67b3e;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #8B5A2B;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #b87c4a;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #b87c4a;
+            color: #b87c4a;
+        }
+        .btn-outline:hover {
+            background: #b87c4a;
+            color: white;
+        }
+        .btn:hover {
+            background: #9a673a;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('main.jpg') center/cover no-repeat;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #5a3e2b;
+            position: relative;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #b87c4a;
+            margin: 0.5rem auto 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #4a4a4a;
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .room-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Carousel styles */
+        .room-carousel {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            background: #e9e2d5;
+        }
+        .carousel-track-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform;
+        }
+        .carousel-slide {
+            flex: 0 0 100%;
+            height: 100%;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+            backdrop-filter: blur(2px);
+        }
+        .carousel-btn:hover {
+            background: rgba(184,124,74,0.9);
+            transform: translateY(-50%) scale(1.05);
+        }
+        .btn-prev {
+            left: 12px;
+        }
+        .btn-next {
+            right: 12px;
+        }
+        .carousel-dots {
+            position: absolute;
+            bottom: 12px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            z-index: 10;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .dot.active {
+            background: #b87c4a;
+            width: 20px;
+            border-radius: 4px;
+        }
+        .room-info {
+            padding: 1.5rem;
+        }
+        .room-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .room-info p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        .price {
+            font-weight: 600;
+            color: #b87c4a;
+            font-size: 1.2rem;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        .amenity {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .amenity i {
+            font-size: 2.5rem;
+            color: #b87c4a;
+            margin-bottom: 1rem;
+        }
+        .amenity h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.02);
+        }
+
+        .location-box {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .map {
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .address {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .address i {
+            color: #b87c4a;
+            margin-right: 8px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .contact-info h3, .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-detail {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .contact-detail i {
+            font-size: 1.5rem;
+            color: #b87c4a;
+            width: 40px;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+        textarea {
+            resize: vertical;
+        }
+
+        footer {
+            background: #2c241a;
+            color: #e2dcd5;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .social-links {
+            margin-top: 1rem;
+        }
+        .social-links a {
+            color: #e2dcd5;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .social-links a:hover {
+            color: #b87c4a;
+        }
+        .visitor-counter {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .visitor-counter i {
+            margin-right: 6px;
+            color: #b87c4a;
+        }
+        #visit-count {
+            font-weight: 600;
+            color: #b87c4a;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .logo-text h2 {
+                font-size: 1.4rem;
+            }
+            .logo-img {
+                max-height: 45px;
+                max-width: 110px;
+            }
+            .room-carousel {
+                height: 220px;
+            }
+            .carousel-btn {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFCZ5JMR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img src="tmk.png" 
+                     alt="The Manor House Kegalle Logo" 
+                     class="logo-img"
+                     onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 80\'%3E%3Crect width=\'200\' height=\'80\' fill=\'%23b87c4a\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-size=\'24\' font-family=\'monospace\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\'%3EManor%3C/text%3E%3C/svg%3E'; this.style.background='#b87c4a';">
+                <div class="logo-text">
+                    <h2>The Manor House</h2>
+                    <p>KEGALLE · SRI LANKA</p>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to The Manor House</h1>
+        <p>Experience colonial elegance & modern comfort in a village setting</p>
+        <a href="#contact" class="btn">Book Your Stay</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">Our Story</h2>
+        <div class="about-grid">
+            <div class="about-img">
+                <img src="main.jpg" alt="Manor House exterior with tropical gardens">
+            </div>
+            <div class="about-text">
+                <h3>A Heritage Retreat</h3>
+                <p>Nestled in the lush greenery, The Manor House is a lovingly restored colonial-era mansion that offers a serene escape. Surrounded by 10 acres of tropical gardens with fruit trees, coconut, tea, cinnamon and banana, we blend old-world charm with contemporary amenities.</p>
+                <p>Our family-run hotel provides personalise service, Sri Lankan hospitality and a peaceful atmosphere perfect for relaxation.</p>
+                <a href="#contact" class="btn btn-outline">Inquire Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ROOMS SECTION WITH AUTO-SLIDE HORIZONTAL CAROUSELS (includes Pinnawala elephant photo) -->
+<section id="rooms" style="background: #faf5ea;">
+    <div class="container">
+        <h2 class="section-title">Elegant Suites & Rooms</h2>
+        <div class="rooms-grid">
+            
+            <!-- Standard Double Room Carousel -->
+            <div class="room-card">
+                <div class="room-carousel" data-autoplay="4000">
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="Stand.jpg" alt="Standard Room garden view"></div>
+                            <div class="carousel-slide"><img src="in.jpg" alt="Manor House pool area"></div>
+                            <div class="carousel-slide"><img src="in2.jpg" alt="Elegant dining setting"></div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn btn-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn btn-next"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-dots"></div>
+                </div>
+                <div class="room-info">
+                    <h3>Standard Double Rooms</h3>
+                    <p>Spacious rooms with garden views, double beds and private verandars or balconies.</p>
+                    <span class="price">From LKR 11,500/night</span>
+                </div>
+            </div>
+            
+            <!-- Family Room Carousel -->
+            <div class="room-card">
+                <div class="room-carousel" data-autoplay="4000">
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="two.jpg" alt="Family Room with balcony"></div>
+                            <div class="carousel-slide"><img src="in1.jpg" alt="Manor House vintage facade"></div>
+                            <div class="carousel-slide"><img src="in3.jpg" alt="Luxury suite interior comfort"></div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn btn-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn btn-next"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-dots"></div>
+                </div>
+                <div class="room-info">
+                    <h3>Family Room</h3>
+                    <p>Perfect for family, this spacious ensuite room features two double beds and a private balcony. Suitable for a couple with one child.</p>
+                    <span class="price">From LKR 13,500/night</span>
+                </div>
+            </div>
+            
+            <!-- Deluxe Room with Lounge and terrace (includes Pinnawala Elephant photo) -->
+            <div class="room-card">
+                <div class="room-carousel" data-autoplay="4000">
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="one.jpg" alt="Deluxe Room with lounge terrace"></div>
+                          
+                            <div class="carousel-slide"><img src="https://cdn.pixabay.com/photo/2019/08/22/05/56/elephant-4422799_1280.jpg" alt="Pinnawala Elephant Orphanage - close to Manor House"></div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn btn-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn btn-next"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-dots"></div>
+                </div>
+                <div class="room-info">
+                    <h3>Deluxe Room with Lounge and terrace</h3>
+                    <p>Experience versatile comfort. Large bathroom, lounge with sofa, dining table, private terrace — a quiet sanctuary with essential amenities.</p>
+                    <span class="price">From LKR 16,800/night</span>
+                </div>
+            </div>
+            
+            <!-- Deluxe Family Suite with Lounge and Balcony (also featuring Pinnawala Elephant) -->
+            <div class="room-card">
+                <div class="room-carousel" data-autoplay="4000">
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="three.jpg" alt="Deluxe Family Suite living area"></div>
+                            <div class="carousel-slide"><img src="in.jpg" alt="Swimming pool relaxation"></div>
+                            <div class="carousel-slide"><img src="https://cdn.pixabay.com/photo/2019/08/22/05/56/elephant-4422799_1280.jpg" alt="Pinnawala elephants - nearby attraction"></div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn btn-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn btn-next"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-dots"></div>
+                </div>
+                <div class="room-info">
+                    <h3>Deluxe Family Suite with Lounge and Balcony</h3>
+                    <p>Spacious suite: double bed + two single beds, large bathroom, lounge with sofa set, dining table, private balcony – ideal for families.</p>
+                    <span class="price">From LKR 18,500/night</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="amenities">
+    <div class="container">
+        <h2 class="section-title">Amenities & Services</h2>
+        <div class="amenities-grid">
+            <div class="amenity"><i class="fas fa-wifi"></i><h4>Free WiFi</h4><p>High-speed internet throughout</p></div>
+            <div class="amenity"><i class="fas fa-utensils"></i><h4>Asian Breakfast</h4><p>Traditional Sri Lankan & English or continental options</p></div>
+            <div class="amenity"><i class="fas fa-car"></i><h4>Free Parking</h4><p>Secure on-site parking</p></div>
+            <div class="amenity"><i class="fas fa-tree"></i><h4>10-Acre Gardens</h4><p>Tropical fruits, coconut, tea, cinnamon & banana</p></div>
+            <div class="amenity"><i class="fas fa-snowflake"></i><h4>Air Conditioning</h4><p>All rooms fully air-conditioned</p></div>
+            <div class="amenity"><i class="fas fa-concierge-bell"></i><h4>24/7 Concierge</h4><p>Personalized assistance</p></div>
+            <div class="amenity"><i class="fas fa-mug-hot"></i><h4>Sri Lankan Lunch/Dinner</h4><p>Authentic local cuisine prepared fresh</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" style="background: #faf5ea;">
+    <div class="container">
+        <h2 class="section-title">Photo Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="in.jpg" alt="Swimming pool and loungers"></div>
+            <div class="gallery-item"><img src="in1.jpg" alt="Manor House facade with vintage charm"></div>
+            <div class="gallery-item"><img src="in2.jpg" alt="Elegant dining area"></div>
+            <div class="gallery-item"><img src="in3.jpg" alt="Luxury suite interior"></div>
+            <div class="gallery-item"><img src="1000001286.jpg" alt="The Manor House official rate & info brochure"></div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;"></div>
+    </div>
+</section>
+
+<section id="location">
+    <div class="container">
+        <h2 class="section-title">Our Location</h2>
+        <div class="location-box">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8503077993887!2d80.40527902420092!3d7.257871819236051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3147c927110a5%3A0xb03e2b8b5065c7c4!2sThe%20Manor%20House%20Kegalle!5e0!3m2!1sen!2slk!4v1774536947166!5m2!1sen!2slk" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="address">
+                <i class="fas fa-map-marker-alt"></i> Mahagoda Estate, Mangalagama Road, Mangalagama, Molagoda, Kegalle, Sabaragamuwa Province, Sri Lanka<br>
+                <i class="fas fa-phone-alt"></i> +94 77 3718508 &nbsp;|&nbsp;
+                <i class="fas fa-envelope"></i> themanorhousekegalle@gmail.com
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Book Your Stay</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-detail"><i class="fas fa-phone"></i> <span>+94 77 371 8508</span></div>
+                <div class="contact-detail"><i class="fas fa-envelope"></i> <span>themanorhousekegalle@gmail.com</span></div>
+                <div class="contact-detail"><i class="fas fa-clock"></i> <span>Check-in: 2:00 PM | Check-out: 11:00 AM</span></div>
+                <div class="contact-detail"><i class="fas fa-globe"></i> <span>Languages: English, Sinhala</span></div>
+            </div>
+            <div class="contact-form">
+                <h3>Send an Inquiry</h3>
+                <form action="https://formspree.io/f/mwvwkgbd" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" name="message" placeholder="Tell us your dates, room preference, or special requests..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <p style="font-size: 0.8rem; margin-top: 1rem;">* For immediate bookings, please call us. We’ll respond within 24 hours.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 The Manor House Kegalle. All rights reserved. | Designed with <i class="fas fa-heart" style="color:#b87c4a;"></i> for authentic hospitality</p>
+        <div class="visitor-counter">
+            <i class="fas fa-eye"></i> Total Visitors:  <span id="visit-count">Loading...</span>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1Av6nz6hcm/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/themanorhousekegalle?igsh=ZzRoeG14cWFwNmdo"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            }
+        });
+    });
+
+    // Active link highlighting on scroll
+    window.addEventListener('scroll', () => {
+        let sections = document.querySelectorAll('section');
+        let scrollPos = window.scrollY + 100;
+        sections.forEach(section => {
+            let top = section.offsetTop;
+            let height = section.offsetHeight;
+            let id = section.getAttribute('id');
+            if(scrollPos >= top && scrollPos < top + height) {
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+
+    // ----- AUTO-SLIDE HORIZONTAL CAROUSEL for each room -----
+    function initRoomCarousels() {
+        const carousels = document.querySelectorAll('.room-carousel');
+        
+        carousels.forEach(carousel => {
+            const track = carousel.querySelector('.carousel-track');
+            const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+            const prevBtn = carousel.querySelector('.btn-prev');
+            const nextBtn = carousel.querySelector('.btn-next');
+            const dotsContainer = carousel.querySelector('.carousel-dots');
+            let currentIndex = 0;
+            let autoInterval = null;
+            const autoplayDelay = parseInt(carousel.dataset.autoplay) || 4000;
+            const slideCount = slides.length;
+            
+            if (slideCount === 0) return;
+            
+            // Set track width dynamically
+            track.style.width = `${slideCount * 100}%`;
+            slides.forEach(slide => {
+                slide.style.width = `${100 / slideCount}%`;
+            });
+            
+            // Create dots
+            if (dotsContainer) {
+                dotsContainer.innerHTML = '';
+                for (let i = 0; i < slideCount; i++) {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    dot.dataset.index = i;
+                    dot.addEventListener('click', () => {
+                        goToSlide(i);
+                        resetAutoPlay();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            }
+            
+            function updateDots() {
+                const dots = carousel.querySelectorAll('.dot');
+                dots.forEach((dot, idx) => {
+                    if (idx === currentIndex) dot.classList.add('active');
+                    else dot.classList.remove('active');
+                });
+            }
+            
+            function goToSlide(index) {
+                if (index < 0) index = slideCount - 1;
+                if (index >= slideCount) index = 0;
+                currentIndex = index;
+                const translatePercent = - (currentIndex * (100 / slideCount));
+                track.style.transform = `translateX(${translatePercent}%)`;
+                updateDots();
+            }
+            
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+            
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+            
+            function startAutoPlay() {
+                if (autoInterval) clearInterval(autoInterval);
+                autoInterval = setInterval(() => {
+                    nextSlide();
+                }, autoplayDelay);
+            }
+            
+            function stopAutoPlay() {
+                if (autoInterval) {
+                    clearInterval(autoInterval);
+                    autoInterval = null;
+                }
+            }
+            
+            function resetAutoPlay() {
+                stopAutoPlay();
+                startAutoPlay();
+            }
+            
+            // Event listeners
+            if (prevBtn) prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                prevSlide();
+                resetAutoPlay();
+            });
+            if (nextBtn) nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                nextSlide();
+                resetAutoPlay();
+            });
+            
+            // Pause on hover
+            carousel.addEventListener('mouseenter', () => stopAutoPlay());
+            carousel.addEventListener('mouseleave', () => startAutoPlay());
+            // For touch devices
+            carousel.addEventListener('touchstart', () => stopAutoPlay());
+            carousel.addEventListener('touchend', () => startAutoPlay());
+            
+            // Initialize
+            goToSlide(0);
+            startAutoPlay();
+        });
+    }
+    
+    // Run after page loads
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initRoomCarousels);
+    } else {
+        initRoomCarousels();
+    }
+    
+    // ----- Visitor Counter (unchanged, robust) -----
+    const counterKey = 'manor-house-kegalle-visits';
+    let visitCount = 0;
+
+    async function updateVisitorCount() {
+        const countElement = document.getElementById('visit-count');
+        if (!countElement) return;
+        try {
+            const response = await fetch(`https://api.countapi.xyz/hit/manor-house/${counterKey}`);
+            const data = await response.json();
+            if (data && typeof data.value === 'number') {
+                visitCount = data.value;
+                countElement.textContent = visitCount.toLocaleString();
+                localStorage.setItem(counterKey, visitCount);
+                return;
+            }
+        } catch (err) {
+            console.warn('CountAPI fallback');
+        }
+        let stored = localStorage.getItem(counterKey);
+        if (stored === null) {
+            visitCount = 1;
+        } else {
+            visitCount = parseInt(stored, 10) + 1;
+        }
+        localStorage.setItem(counterKey, visitCount);
+        countElement.textContent = visitCount.toLocaleString();
+    }
+    updateVisitorCount();
+</script>
+</body>
+</html>
